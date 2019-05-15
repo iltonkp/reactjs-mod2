@@ -27,6 +27,16 @@ const ComapareList = ({ repositories }) => (
             {repository.lastCommit} <small>last commit</small>
           </li>
         </ul>
+
+        <div className="actions">
+          <button id="update" type="button">
+            Atualizar
+          </button>
+          <button id="update" type="button">
+            {' '}
+            Remover
+          </button>
+        </div>
       </Repository>
     ))}
   </Container>
