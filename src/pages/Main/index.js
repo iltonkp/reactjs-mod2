@@ -15,6 +15,17 @@ export default class Main extends Component {
     repositories: [],
   };
 
+  componentDidMount() {
+    const storageRepositories = JSON.parse(localStorage.getItem('repositories'));
+
+    if (storageRepositories) this.setState({ repositories: storageRepositories });
+  }
+
+  saveLocalStorage = () => {
+    const { repositories } = this.state;
+    localStorage.setItem('repositories', JSON.stringify(repositories));
+  };
+
   handleAddRepository = async (e) => {
     e.preventDefault();
 
@@ -34,6 +45,8 @@ export default class Main extends Component {
         repositories: [...repositories, repository],
         repositoryError: false,
       });
+
+      this.saveLocalStorage();
     } catch (err) {
       this.setState({
         repositoryError: true,
