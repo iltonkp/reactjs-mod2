@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Button from '../Button';
+
 import { Container, Repository } from './style';
 
 const ComapareList = ({ repositories }) => (
@@ -29,13 +31,8 @@ const ComapareList = ({ repositories }) => (
         </ul>
 
         <div className="actions">
-          <button id="update" type="button">
-            Atualizar
-          </button>
-          <button id="update" type="button">
-            {' '}
-            Remover
-          </button>
+          <Button title="Atualizar" color="#50c1e9" />
+          <Button title="Excluir" color="#ed5485" />
         </div>
       </Repository>
     ))}

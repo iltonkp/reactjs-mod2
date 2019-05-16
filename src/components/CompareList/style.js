@@ -60,30 +60,7 @@ export const Repository = styled.div`
 
   div.actions {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-
-    button#update {
-      margin: 5px 5px;
-      flex: 1;
-      height: 35px;
-      border: 0;
-      border-radius: 3px;
-      background: #565656;
-
-      &:hover {
-        background: #495959;
-      }
-    }
-
-    button#delete {
-      margin: 5px 5px;
-      flex: 1;
-      height: 35px;
-
-      background: #565656;
-    }
+    flex-direction: column;
+    margin: 10px 10px;
   }
 `;
