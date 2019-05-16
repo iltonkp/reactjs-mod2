@@ -45,6 +45,10 @@ export const Repository = styled.div`
       font-weight: bold;
       padding: 12px 20px;
 
+      i {
+        padding-right: 10px;
+      }
+
       small {
         font-weight: normal;
         font-size: 12px;
