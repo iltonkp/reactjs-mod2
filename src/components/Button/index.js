@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { BTN } from './style';
 
-const Button = ({ color, title }) => (
-  <BTN color={color}>
+const Button = ({ color, title, remove }) => (
+  <BTN color={color} onClick={remove}>
     {' '}
     <strong>{title}</strong>
   </BTN>

@@ -5,7 +5,7 @@ import Button from '../Button';
 
 import { Container, Repository } from './style';
 
-const ComapareList = ({ repositories }) => (
+const ComapareList = ({ repositories, removeRepository }) => (
   <Container>
     {repositories.map(repository => (
       <Repository key={repository.id}>
@@ -32,7 +32,7 @@ const ComapareList = ({ repositories }) => (
 
         <div className="actions">
           <Button title="Atualizar" color="#50c1e9" />
-          <Button title="Excluir" color="#ed5485" />
+          <Button title="Excluir" color="#ed5485" remove={removeRepository} />
         </div>
       </Repository>
     ))}

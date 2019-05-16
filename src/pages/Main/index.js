@@ -58,6 +58,10 @@ export default class Main extends Component {
     }
   };
 
+  removeRepository = () => {
+    alert('excluir');
+  };
+
   render() {
     const {
       repositories, repositoryInput, repositoryError, loading,
@@ -76,7 +80,7 @@ export default class Main extends Component {
           />
           <button type="submit">{loading ? <i className="fa fa-spinner fa-pulse" /> : 'OK'}</button>
         </Form>
-        <CompareList repositories={repositories} />
+        <CompareList repositories={repositories} removeRepository={this.removeRepository} />
       </Container>
     );
   }
