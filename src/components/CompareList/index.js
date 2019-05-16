@@ -20,13 +20,14 @@ const ComapareList = ({ repositories, removeRepository, updateRepository }) => (
             <i className="fa fa-star" /> {repository.stargazers_count} <small>stars</small>
           </li>
           <li>
-            <i className="fa fa-star" /> {repository.forks_count} <small>forks</small>
+            <i className="fa fa-code-fork" /> {repository.forks_count} <small>forks</small>
           </li>
           <li>
-            <i className="fa fa-star" /> {repository.open_issues_count} <small>issues</small>
+            <i className="fa fa-exclamation-circle" /> {repository.open_issues_count}{' '}
+            <small>issues</small>
           </li>
           <li>
-            <i className="fa fa-star" /> {repository.lastCommit} <small>last commit</small>
+            <i className="fa fa-clock-o" /> {repository.lastCommit} <small>last commit</small>
           </li>
         </ul>
 

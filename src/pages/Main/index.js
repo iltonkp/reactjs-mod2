@@ -112,7 +112,11 @@ export default class Main extends Component {
           />
           <button type="submit">{loading ? <i className="fa fa-spinner fa-pulse" /> : 'OK'}</button>
         </Form>
-        <CompareList repositories={repositories} removeRepository={this.removeRepository} updateRepository={this.updateRepository} />
+        <CompareList
+          repositories={repositories}
+          removeRepository={this.removeRepository}
+          updateRepository={this.updateRepository}
+        />
       </Container>
     );
   }
