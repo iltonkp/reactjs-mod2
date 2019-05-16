@@ -5,7 +5,7 @@ import Button from '../Button';
 
 import { Container, Repository } from './style';
 
-const ComapareList = ({ repositories, removeRepository }) => (
+const ComapareList = ({ repositories, removeRepository, updateRepository }) => (
   <Container>
     {repositories.map(repository => (
       <Repository key={repository.id}>
@@ -31,8 +31,8 @@ const ComapareList = ({ repositories, removeRepository }) => (
         </ul>
 
         <div className="actions">
-          <Button title="Atualizar" color="#50c1e9" />
-          <Button title="Excluir" color="#ed5485" remove={removeRepository} />
+          <Button title="Atualizar" color="#50c1e9" action={updateRepository} data={repository} />
+          <Button title="Excluir" color="#ed5485" action={removeRepository} data={repository} />
         </div>
       </Repository>
     ))}
@@ -54,6 +54,9 @@ ComapareList.propTypes = {
       lastCommit: PropTypes.string,
     }),
   ).isRequired,
+
+  updateRepository: PropTypes.func.isRequired,
+  removeRepository: PropTypes.func.isRequired,
 };
 
 export default ComapareList;
